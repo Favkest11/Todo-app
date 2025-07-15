@@ -1,0 +1,283 @@
+:root{
+   --ff-base:"Noto Sans", sans-serif; 
+}
+*{
+    font-family: var(--ff-base);
+    color:white;
+    font-size: 18px;
+    font-weight: 400;
+}
+h1{
+    font-size: 48px;
+    font-weight: 700;
+}
+body{
+    box-sizing: border-box;
+    background:hsl(235, 21%, 11%) ;
+    margin: 0;
+    padding: 0;
+}
+.bg-img{
+   background-image: url("../images/bg-desktop-dark.jpg");
+   background-size: cover;
+  background-repeat: no-repeat;
+    height: 30vh;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  padding-top: 3rem;
+    
+}
+.logo-switch-theme{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.container-for-lst {
+  width: 35%;
+    display: flex;
+    flex-direction: column;
+}
+.to-do-input {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+    background: hsl(235, 24%, 19%);
+    border-radius: 5px;
+    height: 4rem;
+    margin-top: 1rem;
+}
+
+#new-task {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border: 2px solid  hsl(234, 11%, 52%);
+    border-radius: 50%;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    background-color: hsl(235, 24%, 19%);
+    background-image:
+        linear-gradient(hsl(235, 24%, 19%)),
+        
+        
+}
+.circle:hover.circle:hover:not(.selected){
+    border: 2px solid transparent;
+  border-radius: 50%;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-image: 
+    radial-gradient(circle at center, hsl(235, 24%, 19%) 99%, transparent 100%),
+    linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+.task-list{
+    background:  hsl(235, 24%, 19%);
+    border-radius: 5px;
+    font-size: 9px;
+    margin-top: 1.3rem;
+    
+}
+.task-list-general-container{
+display: flex;
+justify-content: space-between;
+align-items:center;
+padding: 0.5rem ;
+}
+.categories button{
+    background: transparent;
+    border: none;
+}
+.clear-button{
+    background: transparent;
+    border: none
+}
+
+
+.task-item{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+    background: hsl(235, 24%, 19%);
+    border-radius: 5px;
+    height: 4rem;
+    border-bottom: 1px solid hsl(233, 14%, 35%);
+        cursor: pointer;
+
+}
+
+.buttonselected{
+    color: hsl(220, 98%, 61%);
+}
+.selected{
+    width: 20px;
+    height: 20px;
+    border: 2px solid  hsl(234, 11%, 52%);
+    border-radius: 50%;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    background: linear-gradient(hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+    
+}
+
+
+.visible{
+        display: flex;
+}
+.invisible{
+display: none;
+}
+body.light-theme{
+    background: hsl(0, 0%, 98%);
+}
+body.light-theme .task-list{
+    background: hsl(0, 0%, 98%);
+
+}
+body.light-theme .to-do-input{
+    background: hsl(0, 0%, 98%);
+
+
+}
+body.light-theme *:not(h1){
+    color:black;
+}
+body.light-theme .bg-img{
+   background-image: url("../images/bg-desktop-light.jpg");
+   
+}
+body.light-theme #new-task {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: black;
+}
+body.light-theme .task-item {
+        background: hsl(0, 0%, 98%);
+    border: 0.5px solid  hsl(233, 11%, 84%);
+        cursor: pointer;
+
+}
+body.light-theme .circle{
+        background: hsl(0, 0%, 98%);
+        border: none;
+        cursor: pointer;
+}
+body.light-theme .buttonselected{
+        color: hsl(220, 98%, 61%);
+        cursor: pointer;
+
+}
+
+ body.light-theme .selected{
+    width: 20px;
+    height: 20px;
+    border: 2px solid  hsl(234, 11%, 52%);
+    border-radius: 50%;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    background: linear-gradient(hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+        cursor: pointer;
+
+    
+}
+body.light-theme .circle:hover.circle:hover:not(.selected){
+    border: 2px solid transparent;
+  border-radius: 50%;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-image: 
+    radial-gradient(circle at center, hsl(0, 0%, 98%) 99%, transparent 100%),
+    linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+.cross-img{
+     width: 12px;
+  height: 12px;
+  margin-left: auto;
+  cursor: pointer;
+}
+.completed-text {
+  color: hsl(234, 11%, 52%); 
+  text-decoration: line-through; 
+}
+.task-list-general-container span{
+    font-size: 10px;
+        cursor: pointer;
+
+}
+.tlgcp{
+    font-size: 10px;
+}
+@media (max-width: 600px) {
+  .container-for-lst {
+    width: 90%;
+  }
+
+  .logo-switch-theme {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .to-do-input,
+  .task-item {
+    height: 3rem;
+    padding: 0 0.5rem;
+  }
+
+  #new-task {
+    font-size: 16px;
+  }
+
+  .task-list-general-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .task-list-general-container .categories {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .cross-img {
+    width: 10px;
+    height: 10px;
+  }
+
+  .task-counter,
+  .clear-button,
+  .button-category {
+    font-size: 12px;
+  }
+
+  .circle {
+    width: 16px;
+    height: 16px;
+  }
+
+  .selected {
+    width: 16px;
+    height: 16px;
+  }
+}

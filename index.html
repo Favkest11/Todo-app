@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Todo app</title>
+</head>
+<body>
+<div class="bg-img">
+  
+  <div class="container-for-lst">
+  <div class="logo-switch-theme">
+  <h1>T O D O</h1>
+<img class="switch-icon" src="images/icon-sun.svg">
+  </div>
+  <label class="to-do-input" for="new-task">
+  <span class="circle"></span>
+    <input type="text" id="new-task" placeholder="Add a new task">
+</label>
+<div class="task-list">
+
+<div class="task-list-general-container">
+  <p class="task-counter tlgcp">0 tasks to do </p>
+  <div class="categories">
+    <button ><span class="button-category">All</span></button>
+ <button ><span class="button-category active">Active</span> </button> 
+  <button ><span class="button-category completed">Completed</span></button>
+  </div>
+  <button class="clear-button"><span class="clear-button">Clear Completed</span></button>
+</div>
+</div>
+
+</div>
+
+
+</div>
+ 
+
+
+
+  
+
+
+ <script src="script.js"></script>
+</body>
+</html>
